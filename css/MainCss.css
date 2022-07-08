@@ -1,0 +1,130 @@
+/* Start Global Variables */
+:root {
+    --main-color: hsla(233, 96%, 9%, 0.947);
+    --secondary-color: white;
+    --main-duration: 0.3s;
+    --main-radius: 12px;
+}
+
+/* Global Actions */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Smail Screens */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium Screens */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Big Screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* Header */
+header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 2;
+    background: var(--main-color);
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 97px;
+    position: relative;
+}
+
+/* Cubes */
+.pageContent{
+    min-height: 100vh;
+    background-color: #f6f6ff;
+    background-size: cover;
+    position: relative;
+}
+.mainCube {
+    position: absolute;
+    /* Center Vertical */
+    top: 50%;
+    transform: translateY(-50%);
+    /* Center Horizental */
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 600px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainCube .subCube{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background: linear-gradient(to top, hsla(233, 96%, 9%, 0.722), var(--main-color));
+    display: flex;
+    color: var(--secondary-color);
+    border-radius: var(--main-radius);
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* For mobile phones */
+@media only screen and (max-width: 600px) {
+    .mainCube  {
+        width: 70%;
+        height: 600px;
+        flex-direction: column;
+    }
+    .mainCube .subCube{
+        width: 100%;
+    }
+}
+
+.mainCube .subCube .subCubeHeader{
+    height: 30%;
+    width: 100%;
+}
+
+.mainCube .subCube h2{
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+}
+
+.mainCube .subCube .subCubeIcons{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.mainCube .subCube .subCubeIcons div{
+    width: 40%;
+}
+.subCubeIcons span{
+  font-size: 450%;
+} 
